@@ -17,7 +17,7 @@ import java.sql.SQLException;
  * Created by Krzysztof Podlaski on 04.03.2018.
  */
 public class AccountManager {
-    DAO dao;
+    private DAO dao;
     BankHistory history;
     AuthenticationManager auth;
     InterestOperator interestOperator;
@@ -27,7 +27,9 @@ public class AccountManager {
         Account account = dao.findAccountById(accountId);
         Operation operation = new PaymentIn(user, ammount,description, account);
         boolean success = account.income(ammount);
-        success = dao.updateAccountState(account);
+        if (success) { //Modification after testcase2
+            success = dao.updateAccountState(account);
+        } //Modification after testcase2
         history.logOperation(operation, success);
         return success;
     }
