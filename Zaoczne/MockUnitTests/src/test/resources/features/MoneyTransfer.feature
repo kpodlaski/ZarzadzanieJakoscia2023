@@ -10,6 +10,7 @@ Feature: MoneyTransfer tests, account is not mocked
     Then account:2 value:800.0 pln
     Then account:3 value:300.0 pln
 
+
   Scenario Outline: Proper Internal money flows
     Given SetUpTestEnv
     Given We have user "<user>" with id: 1
