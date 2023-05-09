@@ -1,7 +1,7 @@
 Feature: MoneyTransfer tests, account is not mocked
 
   Scenario: Internal payment, all is ok
-    Given SetUpTestEnv
+    #Given SetUpTestEnv
     Given We have user "Tomasz" with id: 1
     Given "Tomasz" have account: 2 with: 1000 pln
     Given There is an account:3 with 100 pln
@@ -12,7 +12,7 @@ Feature: MoneyTransfer tests, account is not mocked
 
 
   Scenario Outline: Proper Internal money flows
-    Given SetUpTestEnv
+    #Given SetUpTestEnv
     Given We have user "<user>" with id: 1
     Given "<user>" have account: <srcAcc> with: <srcAmount> pln
     Given There is an account:<dstAcc> with <dstAmount> pln
@@ -35,6 +35,7 @@ Feature: MoneyTransfer tests, account is not mocked
 ##### Przykłady scenariuszy do aplikacji
 
 #    Scenario Outline: Operate with wrong ammount
+#         Given SetUpTestEnv
 #        Given We have user with name "<user>"
 #        Given "<user>" has account number: <srcAcc> with amount: <srcAmount>
 #        Given We have account number: <dstAcc> with amount: <dstAmount>

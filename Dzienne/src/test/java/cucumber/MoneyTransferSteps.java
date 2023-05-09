@@ -5,6 +5,7 @@ import biz.AuthenticationManager;
 import biz.BankHistory;
 import biz.InterestOperator;
 import db.dao.DAO;
+import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import model.Account;
 import model.User;
@@ -34,7 +35,8 @@ public class MoneyTransferSteps {
     AccountManager aM;
     List<User> users = new ArrayList<User>();
 
-    @Given("SetUpTestEnv")
+    //@Given("SetUpTestEnv")
+    @Before
     public void setUpTestEnv() throws NoSuchFieldException, IllegalAccessException {
         //... set up
         aM = new AccountManager();
