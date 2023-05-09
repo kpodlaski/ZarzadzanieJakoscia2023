@@ -56,6 +56,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- for Behavioral tests -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>6.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>6.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- for BankApp -->
         <dependency>
             <groupId>org.xerial</groupId>
